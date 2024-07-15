@@ -1,7 +1,8 @@
 # HTTP-SERVER
 ## Simple Linux Http Server
 <br>
-Description
+
+### Description
 
 This project is an advanced HTTP server written in C for Linux. It supports multithreading to handle multiple client connections simultaneously and provides a command-line interface for server management. The server can be started, paused, resumed, and stopped through a user-friendly menu. Additionally, it includes signal handling to gracefully stop the server using SIGINT or SIGTERM.
 
