@@ -105,7 +105,7 @@ Example: If your Linux server's IP address is 192.168.1.100 and your server is r
 
 
 
-    Firewall: Ensure that the firewall on your Linux machine allows incoming connections on port 8080. You may need to configure iptables or ufw depending on your Linux distribution.
+    Firewall: Ensure that the firewall on your Linux machine allows incoming connections on port 4040. You may need to configure iptables or ufw depending on your Linux distribution.
     Network Configuration: Both machines should be on the same local network for direct communication without additional configuration.
 
 This approach allows you to access the webpage served by your Linux-based HTTP server from any machine (including Windows) within your local network, as long as you know the server's IP address and the port it is listening on.
