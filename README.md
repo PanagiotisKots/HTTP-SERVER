@@ -4,52 +4,48 @@
 
 ### Description
 
-This project is an advanced HTTP server written in C for Linux. It supports multithreading to handle multiple client connections simultaneously and provides a command-line interface for server management. The server can be started, paused, resumed, and stopped through a user-friendly menu. Additionally, it includes signal handling to gracefully stop the server using SIGINT or SIGTERM.
+This project is a simple HTTP server written in C for Linux. It supports multithreading to handle multiple client connections simultaneously and provides a command-line interface for server management. 
+The server can be started, paused, resumed, and stopped through an easy and user-friendly menu. Additionally, it includes signal handling to gracefully stop the server using SIGINT or SIGTERM.
 
 
 <br>
 
-Features
+### Features
 
     Multithreading: Each client connection is handled in a separate thread.
     Signal Handling: Gracefully stops the server on SIGINT or SIGTERM.
     Command Line Interface: Provides a menu to control the server.
     Mutex Locking: Ensures thread-safe operations on server state.
 
-Requirements
+### Requirements
 
-    GCC (GNU Compiler Collection)
-    POSIX Threads (pthread)
+    GCC (GNU Compiler Collection) 
+    
 
-Compilation
+### Compilation
 
 To compile the server, run the following command in your terminal:
 
-sh
+gcc advanced_http_server.c -o advanced_http_server 
 
-gcc advanced_http_server.c -o advanced_http_server -pthread
-
-Usage
+### Usage
 
 After compiling the server, you can run the executable:
 
-sh
-
-./advanced_http_server
+sudo ./advanced_http_server
 
 You will be presented with a menu to control the server:
 
-markdown
 
---- Simple HTTP Server Menu ---
-1. Start Server
-2. Pause Server
-3. Resume Server
-4. Stop Server
-5. Exit
-Select an option: 
+# --- Simple HTTP Server Menu ---
+## 1. Start Server
+## 2. Pause Server
+## 3. Resume Server
+## 4. Stop Server
+## 5. Exit
+## Select an option: 
 
-Options
+### Options
 
     Start Server: Starts the HTTP server and listens for incoming connections on port 8080.
     Pause Server: Pauses the server, temporarily stopping it from accepting new connections.
