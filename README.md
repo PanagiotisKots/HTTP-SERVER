@@ -32,7 +32,7 @@ gcc http_server.c -o http_server
 
 After compiling the server, you can run the executable:
 
-sudo ./advanced_http_server
+sudo ./http_server
 
 You will be presented with a menu to control the server:
 
