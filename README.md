@@ -81,7 +81,7 @@ Run the Server:
     Start your HTTP server program on the Linux machine as usual, ensuring it listens on a specified port (e.g., port 4040).
 
 
-    ./advanced_http_server
+    ./http_server
 
 Connect from Windows Machine:
 
