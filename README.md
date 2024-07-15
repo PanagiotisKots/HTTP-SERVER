@@ -26,7 +26,7 @@ The server can be started, paused, resumed, and stopped through an easy and user
 
 To compile the server, run the following command in your terminal:
 
-gcc advanced_http_server.c -o advanced_http_server 
+gcc http_server.c -o http_server 
 
 ### Usage
 
