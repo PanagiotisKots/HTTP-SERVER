@@ -90,14 +90,14 @@ Connect from Windows Machine:
     In the address bar, type the IP address of your Linux server followed by the port number where the server is running. 
     
 
-    http://<linux-server-ip>:8080
+    http://<linux-server-ip>:4040
 
 Replace <linux-server-ip> with the actual IP address of your Linux machine.
 
 Example: If your Linux server's IP address is 192.168.1.100 and your server is running on port 4040, you would type:
 
 
-        http://192.168.1.100:8080
+        http://192.168.1.100:4040
 
     Access the Web Page:
         Press Enter or Go in the web browser's address bar. If everything is set up correctly, 
