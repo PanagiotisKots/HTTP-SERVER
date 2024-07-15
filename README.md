@@ -47,7 +47,7 @@ You will be presented with a menu to control the server:
 
 ### Options
 
-    Start Server: Starts the HTTP server and listens for incoming connections on port 8080.
+    Start Server: Starts the HTTP server and listens for incoming connections on port 4040.
     Pause Server: Pauses the server, temporarily stopping it from accepting new connections.
     Resume Server: Resumes the server if it is paused.
     Stop Server: Stops the server and closes the listening socket.
@@ -77,7 +77,7 @@ Steps to Connect from Windows to Linux Server:
 
 Run the Server:
 
-    Start your HTTP server program on the Linux machine as usual, ensuring it listens on a specified port (e.g., port 8080).
+    Start your HTTP server program on the Linux machine as usual, ensuring it listens on a specified port (e.g., port 4040).
 
     sh
 
