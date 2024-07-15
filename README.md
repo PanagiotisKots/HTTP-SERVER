@@ -69,17 +69,17 @@ Steps to Connect from Windows to Linux Server:
 
         On your Linux server machine, determine its IP address using the ifconfig command:
 
-        sh
 
     ifconfig
 
-    Look for the IP address associated with your network interface (e.g., eth0, wlan0). Note down this IP address.
+    Look for the IP address associated with your network interface (e.g., eth0, wlan0). 
+    
+    (!)Note down this IP address.
 
 Run the Server:
 
     Start your HTTP server program on the Linux machine as usual, ensuring it listens on a specified port (e.g., port 4040).
 
-    sh
 
     ./advanced_http_server
 
@@ -87,24 +87,23 @@ Connect from Windows Machine:
 
     On your Windows machine, open a web browser (such as Chrome, Firefox, or Edge).
 
-    In the address bar, type the IP address of your Linux server followed by the port number where the server is running. For example:
+    In the address bar, type the IP address of your Linux server followed by the port number where the server is running. 
+    
 
-    arduino
-
-http://<linux-server-ip>:8080
+    http://<linux-server-ip>:8080
 
 Replace <linux-server-ip> with the actual IP address of your Linux machine.
 
-Example: If your Linux server's IP address is 192.168.1.100 and your server is running on port 8080, you would type:
+Example: If your Linux server's IP address is 192.168.1.100 and your server is running on port 4040, you would type:
 
-arduino
 
         http://192.168.1.100:8080
 
     Access the Web Page:
-        Press Enter or Go in the web browser's address bar. If everything is set up correctly, you should see the webpage served by your Linux HTTP server.
+        Press Enter or Go in the web browser's address bar. If everything is set up correctly, 
+        you should see the webpage served by your Linux HTTP server.
 
-Notes:
+
 
     Firewall: Ensure that the firewall on your Linux machine allows incoming connections on port 8080. You may need to configure iptables or ufw depending on your Linux distribution.
     Network Configuration: Both machines should be on the same local network for direct communication without additional configuration.
