@@ -102,7 +102,7 @@ This project is a lightweight HTTP server written in 🎓C for 📟Linux, design
 
 
 
-+ 🔥 __Firewall:__ Ensure that the firewall on your Linux machine allows incoming connections on port 4040. You may need to configure iptables or ufw depending on your Linux distribution.
+ 🔥 __Firewall:__ Ensure that the firewall on your Linux machine allows incoming connections on port 4040. You may need to configure iptables or ufw depending on your Linux distribution.
     Network Configuration: Both machines should be on the same local network for direct communication without additional configuration.
 
 # Conclusion
