@@ -1,3 +1,4 @@
+//liraries 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -6,20 +7,33 @@
 #include <signal.h>
 #include <arpa/inet.h>
 
+
+//defines
 #define PORT 4040
 #define BUFFER_SIZE 1024
 #define BACKLOG 10
 
+
+//user aailable ations
 typedef enum {
     SERVER_STOPPED,
     SERVER_RUNNING,
     SERVER_PAUSED
 } ServerState;
 
+
+
+
 volatile ServerState server_state = SERVER_STOPPED;
 int server_socket;
 pthread_mutex_t server_mutex = PTHREAD_MUTEX_INITIALIZER;
 
+
+
+/*
+    funtion that does the linet hanfd\dling proess
+    (hosting htlm ode)
+*/
 void handle_client(int client_socket) {
     char buffer[BUFFER_SIZE];
     int bytes_read = recv(client_socket, buffer, BUFFER_SIZE - 1, 0);
@@ -80,6 +94,8 @@ void* server_thread(void* arg) {
     return NULL;
 }
 
+
+//start serer poand funtion
 void start_server() {
     if (server_state != SERVER_STOPPED) {
         printf("Server is already running or paused.\n");
@@ -116,6 +132,8 @@ void start_server() {
     pthread_detach(server_thread_id);
 }
 
+
+//pause serer oand funtion
 void pause_server() {
     pthread_mutex_lock(&server_mutex);
     if (server_state == SERVER_RUNNING) {
@@ -127,6 +145,8 @@ void pause_server() {
     pthread_mutex_unlock(&server_mutex);
 }
 
+
+//resue serer oand funtion
 void resume_server() {
     pthread_mutex_lock(&server_mutex);
     if (server_state == SERVER_PAUSED) {
@@ -138,6 +158,8 @@ void resume_server() {
     pthread_mutex_unlock(&server_mutex);
 }
 
+
+//stop (terinate ) serer oand funtion
 void stop_server() {
     pthread_mutex_lock(&server_mutex);
     if (server_state != SERVER_STOPPED) {
@@ -150,6 +172,7 @@ void stop_server() {
     pthread_mutex_unlock(&server_mutex);
 }
 
+//display enu funtion
 void display_menu() {
     printf("\n--- Simple HTTP Server Menu ---\n");
     printf("1. Start Server\n");
@@ -168,6 +191,7 @@ void handle_signal(int signal) {
     }
 }
 
+//ain funtion
 int main() {
     signal(SIGINT, handle_signal);
     signal(SIGTERM, handle_signal);
